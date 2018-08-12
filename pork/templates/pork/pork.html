@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+  <h1>Pork Dishes</h1>
+
+  <div class="pt-5" style="background-color: rgba(0, 255, 175, 0.2);">
+      <div class="container">
+
+        <div class="row">
+
+          {% for pork in porks.all %}
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <a href="{%url 'bigpork' pork.id %}"><img class="card-img-top" src="{{ pork.image.url }}" ></a>
+
+              <div class="card-body">
+                <p class="card-text">{{ pork.name }}</p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+<link rel="stylesheet" href="{% static 'css/pork.css' %}">
+
+{% endblock %}

@@ -1,0 +1,8 @@
+body {
+  font-family: Roboto;
+  background: -webkit-linear-gradient(90deg, rgba(0, 255, 175, 0.4) 10%, rgba(0, 175, 255, 0.8) 90%);
+  background:    -moz-linear-gradient(90deg, rgba(0, 255, 175, 0.4) 10%, rgba(0, 175, 255, 0.8) 90%);
+  background:     -ms-linear-gradient(90deg, rgba(0, 255, 175, 0.4) 10%, rgba(0, 175, 255, 0.8) 90%);
+  background:      -o-linear-gradient(90deg, rgba(0, 255, 175, 0.4) 10%, rgba(0, 175, 255, 0.8) 90%);
+  background:         linear-gradient(90deg, rgba(0, 255, 175, 0.4) 10%, rgba(0, 175, 255, 0.8) 90%);
+}

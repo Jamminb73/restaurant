@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+  <h1>Beef Dishes</h1>
+
+  <div class="pt-4" style="background-color: rgba(0, 255, 175, 0.1);">
+      <div class="container">
+
+        <div class="row">
+
+          {% for beef in beefs.all %}
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+
+              <a href="{% url 'bigbeef' beef.id %}"><img class="card-img-top" src="{{ beef.image.url }}" ></a>
+              <div class="card-body">
+                <p class="card-text">{{ beef.name }}</p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+<link rel="stylesheet" href="{% static 'css/beef.css' %}">
+
+{% endblock %}
